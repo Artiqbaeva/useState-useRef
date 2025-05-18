@@ -70,7 +70,7 @@ const RegistrationForm = () => {
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-400 to-purple-400 p-4">
         <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-3xl">
           <h2 className="text-3xl font-bold mb-6 border-b-2 border-purple-400 inline-block">Registration</h2>
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 custom-grid">
             <div>
               <label className="block mb-2 font-semibold">Full Name</label>
               <input required ref={fname} type="text" placeholder="Enter your name" className="w-full p-3 border rounded-md" />
@@ -84,16 +84,16 @@ const RegistrationForm = () => {
               <input required ref={email} type="email" placeholder="Enter your email" className="w-full p-3 border rounded-md" />
             </div>
             <div>
-              <label className="block mb-2 font-semibold">Phone Number</label>
+              <label className="block mb-2 font-semibold" >Phone Number</label>
               <input required ref={number} type="text" placeholder="Enter your number" className="w-full p-3 border rounded-md" />
             </div>
             <div>
               <label className="block mb-2 font-semibold">Password</label>
-              <input required value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Enter your password" className="w-full p-3 border rounded-md" />
+              <input required value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Enter your password" className="w-full p-3 border rounded-md " autoComplete='new-password' />
             </div>
             <div>
               <label className="block mb-2 font-semibold">Confirm Password</label>
-              <input required value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} type="password" placeholder="Confirm your password" className="w-full p-3 border rounded-md" />
+              <input required value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} type="password" placeholder="Confirm your password" className="w-full p-3 border rounded-md" autoComplete='new-password' />
             </div>
 
             <div className="col-span-2">

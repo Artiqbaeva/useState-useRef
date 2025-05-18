@@ -2,3 +2,8 @@
 .trash{
   margin-right: 10px;
 }
+@media (max-width: 767px) {
+  .custom-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
