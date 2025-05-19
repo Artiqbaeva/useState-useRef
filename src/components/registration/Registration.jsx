@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { FaTrash, FaEdit } from 'react-icons/fa';
+import { FaTrash, FaEdit, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const RegistrationForm = () => {
   const fname = useRef(null);
@@ -28,7 +28,6 @@ const RegistrationForm = () => {
       confirmPassword,
       gender
     };
-
     if (editId !== null) {
       const updated = data.map((registration) =>
         registration.id === editId ? all : registration
@@ -126,7 +125,7 @@ const RegistrationForm = () => {
             <div key={registration.id} className="bg-white shadow-lg rounded-2xl p-6 w-80">
               <img
                 src="https://t3.ftcdn.net/jpg/09/38/20/44/360_F_938204480_5BZPwZ4dL5iujr2XZwzkxdFeQJoRDsRE.jpg"
-                alt="Profile"
+                alt=""
                 className="w-full h-45 mx-auto mb-4 rounded-md"
               />
               <h2 className="text-xl font-semibold text-center mb-2">
@@ -138,7 +137,11 @@ const RegistrationForm = () => {
               <p><span className="font-semibold">Confirm Password:</span> {registration.confirmPassword}</p>
               <p><span className="font-semibold">Email:</span> {registration.email}</p>
               <p><span className="font-semibold">Gender:</span> {registration.gender}</p>
-              <div className='flex items-center justify-end gap-[15px] mt-[10px] '>
+                   <div className='flex items-center gap-3'>
+                             <a className='flex  items-center gap-1' href="https://www.linkedin.com/in/mafruza-artiqbaeva" target="_blank"><FaLinkedin/> LinkedIn </a>
+                            <a className='flex items-center gap-1' href="https://github.com/Artiqbaeva" target="_blank"><FaGithub/> Github  </a>
+                </div>
+                <div className='flex items-center justify-end gap-[15px] mt-[10px] '>
                 <button onClick={() => handleEdit(registration)} className='cursor-pointer'><FaEdit /></button>
                 <button onClick={() => handleDelete(registration.id)} className='cursor-pointer'><FaTrash /></button>
               </div>
