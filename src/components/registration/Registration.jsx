@@ -138,7 +138,7 @@ const RegistrationForm = () => {
               <p><span className="font-semibold">Email:</span> {registration.email}</p>
               <p><span className="font-semibold">Gender:</span> {registration.gender}</p>
                    <div className='flex items-center gap-3'>
-                             <a className='flex  items-center gap-1' href="https://www.linkedin.com/in/mafruza-artiqbaeva" target="_blank"><FaLinkedin/> LinkedIn </a>
+                             <a className='flex  items-center gap-1' href="https://www.linkedin.com/in/mafruza-artiqbaeva" target="_blank"><FaLinkedin className='text-blue-800'/> LinkedIn </a>
                             <a className='flex items-center gap-1' href="https://github.com/Artiqbaeva" target="_blank"><FaGithub/> Github  </a>
                 </div>
                 <div className='flex items-center justify-end gap-[15px] mt-[10px] '>
